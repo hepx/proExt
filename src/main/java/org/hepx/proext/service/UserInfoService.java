@@ -309,9 +309,9 @@ public class UserInfoService {
 		// 设置主题
 		email.setCharset("UTF-8");
 		email.setSubject("找回密码");
-		email.setFrom("hepanxi@163.com", "平台管理员");
-		String userName = "hepanxi";
-		String password = "19850208@";
+		email.setFrom("hpx@163.com", "平台管理员");
+		String userName = "hpx";
+		String password = "";
 		email.setAuthenticator(new DefaultAuthenticator(userName, password));
 		email.setTLS(true);
 		email.addTo(address, name);
@@ -320,21 +320,5 @@ public class UserInfoService {
 		email.send();
 	}
 
-//	public static void main(String[] orgs) {
-//		String address = "kaikaixinxin1314@163.com";
-//		String name = "kaixin";
-//		String id = MD5Util.MD5("1");
-//		String e = MD5Util.MD5("hepanxi");
-//		try {
-//			String u = new URL("HTTP", "localhost", 8088,
-//					"/proDs/main/modifyInitPwd.Controller?u=" + id + "&e=" + e)
-//					.toString().trim();
-//			System.out.println(u);
-////			String s = "点击此超链接修改密码：<a href='" + u + "'>" + u + "</a>";
-////			UserInfoService.sendEmail(address, name, s);
-//		} catch (Exception z) {
-//			z.printStackTrace();
-//		}
-//	}
 
 }
